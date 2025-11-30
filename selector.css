@@ -1,0 +1,33 @@
+        .controls {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        label {
+            font-weight: 600;
+            color: #34495e;
+            font-size: 16px
+        }
+
+        select {
+            padding: 10px 15px;
+            border: 2px solid #bdc3c7;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        select:hover {
+            border-color: #00A8CC;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #00A8CC;
+            box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.1);
+        }

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js" defer></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="selector.css">
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <!-- Navigation -->
+  <nav class="bg-blue-600 text-white p-4 sticky top-0">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Dominic's Data Science Portfolio</h1>
+      <ul class="flex space-x-4">
+        <li><a href="#introduction" class="hover:underline">Introduction</a></li>
+        <li><a href="#projects-showcase" class="hover:underline">Projects Showcase</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="introduction" class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Left Column: Introduction Text -->
+        <div>
+          <img src="assets/images/cartoon_portrait.png" alt="Profile portrait"
+            class="w-48 h-auto rounded-lg shadow-lg object-cover border-4 border-gray-200 float-left mr-6 mb-4">
+
+          <h2 class="text-4xl font-bold mb-6">Math-Driven AI Innovation</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            With a keen focus on cutting-edge technology and a strong foundation in advanced mathematics,
+            this portfolio showcases impactful contributions that push the boundaries of AI-driven solutions.
+            Demonstrated expertise in transforming complex challenges into streamlined, high-value outcomes highlights a
+            commitment to innovation and excellence in data science.
+          </p>
+        </div>
+        <!-- Right Column: Skills with Icons -->
+        <div class="space-y-4">
+          <!-- <h3 class="text-2xl font-bold mb-6">Technical Expertise</h3> -->
+
+          <!-- AWS Certification -->
+          <div class="flex items-start p-2 rounded-lg bg-blue-50 hover:bg-blue-100 transition"
+            style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <h4 class="font-semibold text-gray-900">AWS Certified Solutions Architect Associate</h4>
+              <image src="assets/images/aws_saa.png" alt="mlflow_icon" class="w-6 h-6 ml-2 mt-1" />
+            </div>
+          </div>
+          <!-- Programming Languages -->
+          <div class="flex items-start p-2 rounded-lg bg-green-50 hover:bg-green-100 transition"
+            style="display: flex; flex-direction: column; justify-content: center;">
+
+            <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <p class="font-semibold text-gray-900" style="margin: 0%;">Programming Languages</p>
+              <image src="assets/images/python_logo.svg" alt="Python Logo" class="w-6 h-6 ml-2 mt-1" />
+              <image src="assets/images/javascript_logo.svg" alt="JavaScript Logo" class="w-6 h-6 ml-2 mt-1" />
+              <image src="assets/images/icon_cpp.svg" alt="JavaScript Logo" class="w-6 h-6 ml-2 mt-1" />
+              <!-- <p class="text-gray-700">Python, JavaScript, C/C++</p> -->
+            </div>
+          </div>
+
+          <!-- Data Processing -->
+          <div class="flex items-start p-2 rounded-lg bg-purple-50 hover:bg-purple-100 transition"
+            style="display: flex; flex-direction: column; justify-content: center;">
+
+            <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <p class="font-semibold text-gray-900" style="margin: 0%;">Data Processing</p>
+              <image src="assets/images/pandas_logo.svg" alt="JavaScript Logo" class="w-6 h-6 ml-2 mt-1" />
+              <image src="assets/images/polars_logo.svg" alt="Pytorch logo" class="w-6 h-6 ml-2 mt-1" />
+            </div>
+          </div>
+
+          <!-- Deep Learning -->
+          <div class="flex items-start p-2 rounded-lg bg-pink-50 hover:bg-pink-100 transition"
+            style="display: flex; flex-direction: column; justify-content: center;">
+
+            <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <p class="font-semibold text-gray-900" style="margin: 0%;">Deep Learning</p>
+              <image src="assets/images/pytorch_logo.svg" alt="Pytorch logo" class="w-6 h-6 ml-2 mt-1" />
+              <image src="assets/images/tensorflow_logo.svg" alt="JavaScript Logo" class="w-6 h-6 ml-2 mt-1" />
+              <!-- <p class="text-gray-700">Python, JavaScript, C/C++</p> -->
+            </div>
+          </div>
+
+          <!-- Language Models -->
+          <div class="flex items-start p-2 rounded-lg bg-yellow-50 hover:bg-yellow-100 transition"
+            style="display: flex; flex-direction: column; justify-content: center;">
+
+            <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <p class="font-semibold text-gray-900" style="margin: 0%;">Language Model</p>
+              <image src="assets/images/llama_icon.png" alt="JavaScript Logo" class="w-6 h-6 ml-2 mt-1" />
+              <image src="assets/images/bert_icon2.png" alt="Pytorch logo" class="w-6 h-6 ml-2 mt-1" />
+            </div>
+          </div>
+
+          <!-- MLOps -->
+          <div class="flex items-start p-2 rounded-lg bg-indigo-50 hover:bg-indigo-100 transition"
+            style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <h4 class="font-semibold text-gray-900">MLOps and Deployment</h4>
+              <image src="assets/images/mlflow_icon.svg" alt="mlflow_icon" class="w-6 h-6 ml-2 mt-1" />
+              <image src="assets/images/terraform_icon.svg" alt="terraform_icon" class="w-6 h-6 ml-2 mt-1" />
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="flex items-start p-2 rounded-lg bg-orange-50 hover:bg-orange-100 transition"
+            style="display: flex; flex-direction: column; justify-content: center;">
+            <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <p class="font-semibold text-gray-900" style="margin: 0%;">Database Management</p>
+              <image src="assets/images/mysql_logo.svg" alt="MySQL Logo" class="w-6 h-6 ml-2 mt-1" />
+              <!-- <p class="text-gray-700">Python, JavaScript, C/C++</p> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Showcase Section -->
+  <section id="projects-showcase" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Projects Showcase</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: Types of Data Professionals (Radar Chart) -->
+        <div class="bg-white-100 p-4 rounded-lg shadow"
+          style="background-color: #ffffff; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Universal Chance Lost Estimation</h3>
+            <p class="text-gray-700 mb-4">Resolution of a persistent mathematical challenge has enabled quantification
+              of
+              chance lost attributed to PA shops and VMs.</p>
+          </div>
+          <!-- <div class="h-48"> -->
+          <div>
+            <image src="assets/images/lost_sales_thamb.png"></image>
+          </div>
+          <button onclick="openModal('project1-modal')"
+            class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">View Details</button>
+        </div>
+
+        <!-- Card 2: Stat Intuition (Text-Heavy) -->
+        <div class="bg-white-100 p-4 rounded-lg shadow" style="background-color: #ffffff;">
+          <h3 class="text-xl font-semibold mb-2">Ordering Pipeline Automation</h3>
+          <p class="text-gray-700 mb-4">Automation of the legacy manual ordering workflow has yielded a daily efficiency
+            gain of four operational hours, thereby materially enhancing team productivity.</p>
+          <div>
+            <image src="assets/images/auto_order_pipeline.png"></image>
+          </div>
+          <button onclick="openModal('project2-modal')"
+            class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Predictive Analytics Section -->
+  <!-- <section id="predictive-analytics" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Facilitating Decision Making: Predictive Analytics</h2>
+      <p class="mb-4">[Placeholder: Detail a regression project, e.g., predicting customer lifetime value using Scikit-learn. Include model evaluation metrics like R² or MSE.]</p>
+      <p class="mb-4">[Placeholder: Explain business impact, e.g., "Enabled 15% better sales forecasts for strategic planning."]</p>
+      <div class="mt-6">
+        <button onclick="openModal('predictive-analytics-modal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Productivity Section -->
+  <!-- <section id="productivity" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Enhancing Productivity: Tools and Automation</h2>
+      <p class="mb-4">[Placeholder: Describe an AI project, e.g., a classification agent using LangChain or a RAG system for querying data.]</p>
+      <p class="mb-4">[Placeholder: Detail a Qlik Sense project, e.g., "Developed a self-service dashboard for transaction queries, used by 3 business units."]</p>
+      <div class="mt-6">
+        <button onclick="openModal('productivity-modal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Deployment and Visualization Section -->
+  <!-- <section id="deployment" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Deployment and Visualization: Turning Insights into Products</h2>
+      <p class="mb-4">[Placeholder: Describe deployment, e.g., hosting a model on AWS Lambda or a dashboard on Qlik Cloud.]</p>
+      <p class="mb-4">[Placeholder: Highlight visualizations, e.g., "Created interactive Plotly histograms with KDE smoothing for user analytics."]</p>
+      <div class="mt-6">
+        <button onclick="openModal('deployment-modal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Conclusion Section -->
+  <!-- <section id="conclusion" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Conclusion and Future Work</h2>
+      <p class="mb-4">[Placeholder: Summarize impacts, e.g., "Improved data processing efficiency by 50% and enabled data-driven decisions across teams."]</p>
+      <p class="mb-4">[Placeholder: Outline future goals, e.g., "Exploring advanced ML models and multi-BU dashboard rollouts."]</p>
+      <a href="mailto:[Your Email]" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Contact Me</a>
+    </div>
+  In retail company, maintaining optimal stock levels is crucial, but real-time inventory tracking is often impractical. Our company faced this persistent challenge especially for PA shops or other non-omu items. Without decent methods to estimate the availablility of items, it hinders inventory optimization, accurate sales forecasting and loss estimation.
+
+  </section> -->
+
+  <!-- Modals -->
+  <div id="project1-modal" class="modal hidden">
+    <div class="modal-content">
+      <button onclick="closeModal('project1-modal')" class="modal-close" , style="margin-right: 20px;">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">Universal Chance Lost Estimation</h3>
+      <!-- <p class="mb-4"></p> -->
+      <div class="section">
+        <h2 class="modal-section-title">1. Background</h2>
+        <div class="modal-subsection">
+          <strong>Historical Limitations and the Challenge</strong>
+          <p>
+            In the retail sector, maintaining optimal inventory buffers is critical, yet true real-time stock visibility
+            remains a persistent operational challenge. This visibility gap creates a significant analytical blind spot:
+            only sales can be tracked, but not demand. Without a robust method to estimate lost sales (i.e. chance loss)
+            —the sales that would have
+            occurred had stock been available—our data reflects only supply constraints rather than actual customer
+            intent.
+            Quantifying these missed opportunities is the prerequisite for uncovering <strong>True Demand</strong>, a
+            metric
+            that is essential for calibrating high-precision forecasting models and driving genuine inventory
+            optimization.
+            <!-- In retail company, maintaining optimal stock levels is crucial, but real-time inventory tracking is often impractical. Our company faced this persistent challenge especially for PA shops or other non-omu items. Without decent methods to estimate the availablility of items, it hinders inventory optimization, accurate sales forecasting and loss estimation. -->
+            <!-- In the retail sector, maintaining optimal inventory buffers is critical, yet true real-time stock visibility remains a persistent operational challenge. This visibility gap is particularly acute within our PA shops and for non-OMU items, where data latency severely undermines our ability to optimize inventory, forecast accurately, and quantify opportunity costs. -->
+          </p>
+        </div>
+        <div width="100%" style="display: flex; justify-content: center;">
+          <img style="width: 80%;" , src="assets/images/hmm_background.png" />
+        </div>
+        <div>
+          <p>
+            Historically, our capability to estimate lost sales (i.e. chance loss) was restricted to "non-PA"
+            environments—simplified
+            ecosystems characterized by single-daily replenishment and same-day expiration logic. However, replicating
+            this approach
+            for PA shops or other low sales non-omusubi items presented significant mathematical complexities that
+            legacy models could
+            not address, necessitating a more advanced analytical framework.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="modal-section-title">2. Methodology: Hidden Markov Modeling</h2>
+        <div class="modal-subsection">
+          <strong>The Concept: "Reading Between the Lines"</strong>
+          <p>
+            To bridge the visibility gap, we utilize the <strong>Hidden Markov Model (HMM)</strong>. This probabilistic
+            framework acts as a decoder: it takes the data we <em>can</em> see (sales transactions) to mathematically
+            infer the reality we <em>cannot</em> see (shelf availability).
+          </p>
+
+          <div style="display: flex; justify-content: center;">
+            <img style="width: 80%;" src="assets/images/hmm_illustration.png" />
+          </div>
+          <p style="margin-top: 15px;">
+            The model operates by analyzing four core components:
+          </p>
+
+          <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.6;">
+            <li>
+              <strong>The Hidden Reality (Hidden States):</strong>
+              The true status of the shelf at any given hour—either <em>Available</em> (In-Stock) or <em>Empty</em>
+              (Out-of-Stock). This is the "unknown" we are solving for.
+            </li>
+            <li>
+              <strong>The Visible Evidence (Observations):</strong>
+              The actual hourly sales data recorded by the POS system. This is the only hard evidence the model has
+              access to.
+            </li>
+            <li>
+              <strong>The Dynamics (Transition Probabilities):</strong>
+              The mathematical likelihood of the shelf status changing over time (e.g., the probability of an item going
+              from "Available" to "Empty" as the day progresses).
+            </li>
+            <li>
+              <strong>The Signal (Emission Probabilities):</strong>
+              The expected sales behavior for each state. For example, if the shelf is full, we expect frequent sales
+              signals; if the shelf is empty, the model expects "silence" (zero sales).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="modal-section-title">3. Model Results Visualization</h2>
+        <div class="modal-subsection">
+          <p>
+            The subsequent figure showcases exemplary model outputs from the Hidden Markov Model framework,
+            demonstrating its ability to infer unobserved self-availability states through inference on univariate
+            hourly sales data.
+          </p>
+          <div style="margin-top: 20px; margin-left: 20px;">
+            <label for="chartSelector">Select Chart:</label>
+            <select onchange="switchChart('chart-' + this.value)">
+              <option value="1">3OMU000002</option>
+              <option value="2">3OMU000005</option>
+            </select>
+          </div>
+          <div id="chart-1" data-chart>
+            <iframe id="chart1" width="100%" height="500px" style="border: none;"
+              src="assets/charts/plot_3OMU000002.html"></iframe>
+          </div>
+          <div id="chart-2" data-chart class="hidden">
+            <iframe id="chart2" width="100%" height="500px" style="border: none;"
+              src="assets/charts/plot_3OMU000005.html"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="modal-section-title">4. Operational Impact</h2>
+
+        <div class="modal-subsection">
+          <p>
+            This sophisticated analytics solution fundamentally enhances inventory management through two key
+            capabilities:
+          </p>
+          <div>
+            <strong>Causal Demand Estimation</strong>
+            <p>
+              Through explicit modeling of the latent availability mechanism, the system recovers unobserved demand lost
+              to stockouts, yielding accurate demand forecasts that decouple observed sales from availability
+              constraints—a critical distinction for robust demand planning.
+            </p>
+          </div>
+
+          <strong>Intelligent Replenishment Logic</strong>
+          <p>
+            The HMM's inference of availability states unlocks sophisticated, data-centric replenishment strategies that
+            automatically adjust to demand dynamics. Rather than relying on fixed thresholds or reactive inventory
+            management, the model identifies optimal replenishment opportunities by distinguishing between genuine low
+            demand and stockout-induced sales gaps.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="project2-modal" class="modal hidden">
+    <div class="modal-content">
+      <button onclick="closeModal('project2-modal')" class="modal-close" , style="margin-right: 20px;">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">Ordering Pipeline Automation</h3>
+      <div class="section">
+        <h2 class="modal-section-title">1. Background and Chanllenges</h2>
+        <div style="display: flex;flex-direction: row; justify-content: space-between; height: fit-content;">
+          <div>
+            <div class="modal-subsection">
+              <strong>Legacy Process Complexity</strong>
+              <p>
+                The legacy ordering process was characterized by high operational friction and complexity. Orchestrating
+                orders for a diverse network of shops involved navigating multifaceted constraints, including
+                item-specific availability windows, allocation quotas, and varying shop inventories.
+              </p>
+            </div>
+            <div class="modal-subsection">
+              <strong>Operational Burden</strong>
+              <p>
+                This manual workflow was labor-intensive and error-prone, requiring approximately <span
+                  class="modal-highlight">5 hours daily—effectively consuming a team member's entire morning capacity on
+                  ordering operations alone.</span>
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <img style="width: 80%;" , src="assets/images/DailOrderingBurden.png" />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2 class="modal-section-title">2. Strategic Intervention: End-to-End Automated Ordering Pipeline</h2>
+        <div class="modal-subsection">
+          <strong>Solution Architecture</strong>
+          <p>
+            To dismantle these operational bottlenecks, we deployed a scalable <strong>End-to-End Automated Ordering
+              Pipeline</strong>. Designed around a 'Configure-then-Run' paradigm, this solution shifts the user’s role
+            from manual execution to strategic parameter setting, ensuring precision with minimal intervention.
+          </p>
+        </div>
+        <div width="100%" style="display: flex; justify-content: center;">
+          <img style="width: 100%;" , src="assets/images/OrderingPipeline.png" />
+        </div>
+        <div class="modal-subsection">
+          <strong>Core Capabilities</strong>
+          <ul style="margin-left: 20px; margin-top: 10px;">
+            <li><strong>Deployed on AWS Cloud</strong> to ensure high availability, scalability, and secure remote
+              access</li>
+            <li><strong>Applies</strong> complex business logic and constraint algorithms to calculate optimal order
+              quantities</li>
+            <li><strong>Executes</strong> automatically on a daily schedule, reducing human intervention to a final
+              verification checkpoint</li>
+            <li><strong>Clean and Traceable</strong> with comprehensive logging and audit trails for full end-to-end
+              visibility</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h2 class="modal-section-title">3. Operational Impact</h2>
+        <div class="modal-subsection">
+          <strong>Efficiency Transformation</strong>
+          <p>
+            The transition from manual calculation to automated orchestration has delivered immediate efficiency gains.
+            The daily time expenditure for ordering has collapsed from <strong>5 hours to approximately 30
+              minutes</strong>.
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; flex-direction: row;">
+          <div class="modal-impact-box">
+            <span>Daily Capacity Unlocked</span>
+            <span class="modal-number">4.5 hours</span>
+            <span>per day</span>
+          </div>
+        </div>
+
+        <div class="modal-subsection">
+          <!-- <strong>Strategic Reallocation</strong> -->
+          <p>
+            This efficiency gain allows the operations team to reallocate bandwidth toward high-value strategic tasks
+            rather than repetitive administration, improving overall productivity and decision-making quality.
+          </p>
+        </div>
+      </div>
+      <!-- Section 4: Future Roadmap -->
+      <div class="modal-section">
+        <h2 class="modal-section-title">4. Collaborative Decision Support (Continuing Development)</h2>
+        <div class="modal-subsection">
+          <strong>Stakeholder Empowerment</strong>
+          <!-- <strong>Next-Phase Enhancement</strong> -->
+          <p>
+            The next phase of development focuses on augmenting the pipeline with a <strong>Decision Support System
+              (DSS)</strong> interface. This front-end layer will empower non-technical stakeholders to contribute
+            directly to the ordering strategy.
+          </p>
+        </div>
+        <div class="modal-subsection">
+          <p>
+            Shop Teams and PPD (Product Planning & Distribution) experts will be able to input qualitative insights
+            directly into the model. By synthesizing algorithmic logic with human expertise, the pipeline will evolve
+            from a purely operational tool into a strategic asset for smarter inventory management.
+          </p>
+        </div>
+        <div width="100%" style="display: flex; justify-content: center;">
+          <img style="width: 80%;" , src="assets/images/portal.png" />
+        </div>
+      </div>
+      <div class="modal-section">
+        <h2 class="modal-section-title">Summary</h2>
+        <div style="display: flex; justify-content: center;">
+          <table style="width: fit-content;">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Legacy Manual Process</th>
+                <th>Automated Pipeline (New)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Workflow Logic</strong></td>
+                <td>
+                  <li>Low traceability and scalability.</li>
+                  <li>Vulnerable to human error</li>
+                </td>
+                <td>
+                  <li>Traceable and scalable.</li>
+                  <li>Standardized and verified programmatically</li>
+                  <li>Reproducible by a single config file.</li>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Time Cost</strong></td>
+                <td>~300 minutes / day</td>
+                <td>~30 minutes / day</td>
+              </tr>
+              <tr>
+                <td><strong>Role of Human</strong></td>
+                <td>
+                  <li>Information handling from differnt sources</li>
+                  <li>Post processing</li>
+                </td>
+                <td>
+                  <li>Strategic review and verification</li>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- <p class="mb-4">
+        Background: The existing ordering process was manual, time-consuming and error-prone. The ordering process is extremely complex since different shops could sell different items, 
+        and different items can have different constraints such as the constraints on the total quantity allocated, the period of availability. This usually takes up a whole morning to complete the ordering for all the shops.
+        Solution: Developed an automated ordering pipeline using Python that integrates with existing systems to streamline the ordering workflow. The solution involved data extraction, transformation, and loading (ETL) processes to ensure accurate and timely orders. 
+        The ordering pipeline run automatically on daily basis, reducing manual intervention. Manually verifying the orders is still needed to ensure the correctness of the orders.
+        Impact: The automated ordering pipeline can reduce the original 5 hours of manual work to around 30 minutes, saving more than 4 hours of operational time daily. This efficiency gain allows the team to focus on higher-value tasks, 
+        improving overall productivity and accuracy in the ordering process.
+        Future Work: Plans to develop a user-friendly interface for non-technical users such as shop teams and PPD teams to share their expert opinions. With all rounded information, the ordering pipeline can make better decisions on ordering strategies.
+      </p>   -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Dominic, Ngan Cheung TAI. All rights reserved.</p>
+      <!-- <p>[Placeholder: Add links to GitHub, LinkedIn, or other profiles.]</p> -->
+    </div>
+  </footer>
+</body>
+
+</html>

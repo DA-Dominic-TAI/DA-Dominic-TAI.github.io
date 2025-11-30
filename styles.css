@@ -1,0 +1,292 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #1e40af;
+  padding: 1rem;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 3rem 1rem;
+}
+
+#introduction, #predictive-analytics, #deployment {
+  background-color: #ffffff;
+}
+
+#projects-showcase, #productivity, #conclusion {
+  background-color: #f3f4f6;
+}
+
+section h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Projects Showcase Grid */
+#projects-showcase .grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  #projects-showcase .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  #projects-showcase .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+#projects-showcase .card {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#projects-showcase .card.bg-green-100 {
+  background-color: #d1fae5;
+}
+
+#projects-showcase .card.bg-white-100 {
+  background-color: #ffffff;
+}
+
+#projects-showcase .card.bg-gray-800 {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+#projects-showcase .card.bg-white-800 {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+#projects-showcase .card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#projects-showcase .card p {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+#projects-showcase .card.bg-gray-800 p {
+  color: #d1d5db;
+}
+
+#projects-showcase .card canvas {
+  width: 100%;
+  height: 12rem;
+  margin-top: auto;
+}
+
+#projects-showcase .card button {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #1e40af;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+#projects-showcase .card button:hover {
+  background-color: #1e3a8a;
+}
+
+/* Modals */
+/* .modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 24rem;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.25rem;
+  color: #4b5563;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  color: #111827;
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+}
+
+.modal-content canvas {
+  width: 100%;
+  height: 8rem;
+} */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  /* transition: opacity 0.3s ease, visibility 0.3s ease; */
+  /* visibility: hidden; */
+  z-index: 1000; /* Ensure modals are above other content */
+}
+
+.modal.hidden{
+  /* opacity: 0; */
+  display: none;
+  /* transition: opacity 0.3s ease, visibility 0.3s ease; */
+}
+
+.hidden{
+  /* visibility: hidden; */
+  display: none;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: scroll;
+  width: 100%;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #4b5563;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #1f2937;
+}
+
+.modal:not(.hidden) {
+  visibility: visible;
+  /* display: block; */
+}
+
+/* .modal:(.hidden) {
+  visibility: visible;
+} */
+/* Chart Styling */
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #1e40af;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Debug Rule to Confirm CSS Loading */
+body::before {
+  content: "CSS is loaded";
+  color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
