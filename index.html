@@ -23,13 +23,13 @@
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Dominic's Data Science Portfolio</h1>
       <ul class="flex space-x-4">
-        <li><a href="#introduction" class="hover:underline">Introduction</a></li>
+        <!-- <li><a href="#introduction" class="hover:underline">Introduction</a></li> -->
         <li><a href="#projects-showcase" class="hover:underline">Projects Showcase</a></li>
       </ul>
     </div>
   </nav>
   <!-- Hero Section -->
-  <section id="introduction" class="bg-white py-12">
+  <section id="introduction" class="bg-white py-12" style="display: None;">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -136,6 +136,21 @@
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-6">Projects Showcase</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+       <!-- Card 0: Types of Data Professionals (Radar Chart) -->
+        <div class="bg-white-100 p-4 rounded-lg shadow"
+          style="background-color: #ffffff; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Association Rule Mining</h3>
+            <p class="text-gray-700 mb-4">Uncovering latent inter-item dependencies within transactional datasets, 
+              enabling data-driven optimization of product bundling and customer segmentation strategies.</p>
+          </div>
+          <!-- <div class="h-48"> -->
+          <div>
+            <image src="assets/images/arules_cover.png"></image>
+          </div>
+          <button onclick="openModal('project0-modal')"
+            class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">View Details</button>
+        </div>
 
         <!-- Card 1: Types of Data Professionals (Radar Chart) -->
         <div class="bg-white-100 p-4 rounded-lg shadow"
@@ -169,55 +184,91 @@
     </div>
   </section>
 
-  <!-- Predictive Analytics Section -->
-  <!-- <section id="predictive-analytics" class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Facilitating Decision Making: Predictive Analytics</h2>
-      <p class="mb-4">[Placeholder: Detail a regression project, e.g., predicting customer lifetime value using Scikit-learn. Include model evaluation metrics like R² or MSE.]</p>
-      <p class="mb-4">[Placeholder: Explain business impact, e.g., "Enabled 15% better sales forecasts for strategic planning."]</p>
-      <div class="mt-6">
-        <button onclick="openModal('predictive-analytics-modal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Productivity Section -->
-  <!-- <section id="productivity" class="py-12 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Enhancing Productivity: Tools and Automation</h2>
-      <p class="mb-4">[Placeholder: Describe an AI project, e.g., a classification agent using LangChain or a RAG system for querying data.]</p>
-      <p class="mb-4">[Placeholder: Detail a Qlik Sense project, e.g., "Developed a self-service dashboard for transaction queries, used by 3 business units."]</p>
-      <div class="mt-6">
-        <button onclick="openModal('productivity-modal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Deployment and Visualization Section -->
-  <!-- <section id="deployment" class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Deployment and Visualization: Turning Insights into Products</h2>
-      <p class="mb-4">[Placeholder: Describe deployment, e.g., hosting a model on AWS Lambda or a dashboard on Qlik Cloud.]</p>
-      <p class="mb-4">[Placeholder: Highlight visualizations, e.g., "Created interactive Plotly histograms with KDE smoothing for user analytics."]</p>
-      <div class="mt-6">
-        <button onclick="openModal('deployment-modal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Conclusion Section -->
-  <!-- <section id="conclusion" class="py-12 bg-gray-50">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Conclusion and Future Work</h2>
-      <p class="mb-4">[Placeholder: Summarize impacts, e.g., "Improved data processing efficiency by 50% and enabled data-driven decisions across teams."]</p>
-      <p class="mb-4">[Placeholder: Outline future goals, e.g., "Exploring advanced ML models and multi-BU dashboard rollouts."]</p>
-      <a href="mailto:[Your Email]" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Contact Me</a>
-    </div>
-  In retail company, maintaining optimal stock levels is crucial, but real-time inventory tracking is often impractical. Our company faced this persistent challenge especially for PA shops or other non-omu items. Without decent methods to estimate the availablility of items, it hinders inventory optimization, accurate sales forecasting and loss estimation.
-
-  </section> -->
-
   <!-- Modals -->
+  <div id="project0-modal" class="modal hidden">
+    <div class="modal-content">
+      <button onclick="closeModal('project0-modal')" class="modal-close" , style="margin-right: 20px;">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">Association Rule Mining</h3>
+      <!-- <p class="mb-4"></p> -->
+      <div class="section">
+        <h2 class="modal-section-title">1. Background</h2>
+        <div class="modal-subsection">
+          <p>
+           Understanding how products are purchased together is essential for driving revenue growth and improving customer experience. 
+           Association Rule Mining uncovers these hidden purchasing patterns, enabling businesses to make strategic decisions on <strong>product bundling</strong>, 
+           <strong>cross-selling</strong>, and <strong>inventory management</strong>. By transforming transactional data into actionable insights, 
+           it bridges the gap between what customers buy and how to optimize business outcomes.
+          </p>
+        </div>
+        <div width="100%" style="display: flex; justify-content: center;">
+          <img style="width: 80%;" , src="assets/images/arules_background.png" />
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="modal-section-title">2. Association Rule Mining</h2>
+        <div class="modal-subsection">
+        <p>
+          Association rules are extracted from transactional data using efficient FP-growth algorithm,
+            which identify frequent itemsets and their co-occurrence patterns. These rules quantify the strength 
+            of relationships between products, enabling systematic discovery of purchasing dependencies that drive 
+            cross-selling and bundling opportunities.
+        </p>
+          <strong>Network Visualization</strong>
+          <p>
+            The mined association rules are represented as network graphs, where nodes symbolize individual items 
+            and weighted edges reflect the strength of association between them. This visualization reveals product 
+            clusters, dominant items, and strategic connection points within the purchase ecosystem.
+          </p>
+
+          <div class="image-row">
+              <img src="assets/images/arules_example.png" alt="example2">
+              <img src="assets/images/arules_cover.png" alt="example1">
+          </div>
+          <strong>Quantitative Analysis</strong>
+          <p>
+            Beyond visualization, we apply graph-based metrics to quantify item importance and influence within the 
+            association network. This enables data-driven prioritization of products for strategic interventions.
+          </p>
+
+          <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+            <li>
+              <strong>Page Rank:</strong>
+              Identifies high-influence items that trigger cascading purchases across the product network. 
+              Items with higher Page Rank generate disproportionate sales impact when promoted or positioned strategically.
+            </li>
+            <li>
+              <strong>Node Value:</strong>
+              Quantifies the total sales potential unlocked by each item based on its position and connectivity within 
+              the association network. Higher node values indicate items that are pivotal to overall revenue generation.
+            </li>
+          </ul> 
+
+          <div class="image-row">
+              <img src="assets/images/arules_pagerank.png" alt="page_rank">
+              <img src="assets/images/arules_nodevalue.png" alt="node_value">
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="modal-section-title">3. Democratizing Insights: Open Access to Association Intelligence</h2>
+        <div class="modal-subsection">
+          <p>
+            The model is deployed on AWS cloud infrastructure, enabling shop team or marketing team to independently run custom analyses 
+            for their specific needs—whether analyzing different shops, promotional events, or item subsets. 
+            The cloud-native architecture ensures scalability and resilience, transforming association intelligence into a self-service 
+            resource accessible across the organization.
+          </p>
+          <div width="100%" style="display: flex; justify-content: center;">
+            <img style="width: 80%;" , src="assets/images/arules_interface.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div id="project1-modal" class="modal hidden">
     <div class="modal-content">
       <button onclick="closeModal('project1-modal')" class="modal-close" , style="margin-right: 20px;">&times;</button>
